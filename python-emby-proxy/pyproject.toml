@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "python-emby-proxy"
+version = "0.0.3"
+description = "Python emby reverse proxy."
+authors = ["ChenyangGao <wosiwujm@gmail.com>"]
+license = "MIT"
+readme = "readme.md"
+homepage = "https://github.com/ChenyangGao/web-mount-packs/tree/main/python-emby-proxy"
+repository = "https://github.com/ChenyangGao/web-mount-packs/tree/main/python-emby-proxy"
+keywords = ["emby", "reverse proxy"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3 :: Only",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+include = [
+    "LICENSE",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+blacksheep = "*"
+httpx = "*"
+python-reverse-proxy = ">=0.0.10"
+pyyaml = "*"
+uvicorn = "*"
+
+[tool.poetry.scripts]
+python-emby-proxy = "emby_proxy.__main__:main"
+emby-proxy = "emby_proxy.__main__:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.packages]]
+include = "emby_proxy"

@@ -1,0 +1,61 @@
+[tool.poetry]
+name = "python-alist"
+version = "0.0.13.12"
+description = "Python wrapper for alist."
+authors = ["ChenyangGao <wosiwujm@gmail.com>"]
+license = "MIT"
+readme = "readme.md"
+homepage = "https://github.com/ChenyangGao/web-mount-packs/tree/main/python-alist-client"
+repository = "https://github.com/ChenyangGao/web-mount-packs/tree/main/python-alist-client"
+keywords = ["alist", "client"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+include = [
+    "LICENSE",
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+ed2k = ">=0.0.1.1"
+glob_pattern = "*"
+http_response = "*"
+httpx = "*"
+httpx_request = ">=0.1"
+multidict = "*"
+orjson = "*"
+p115qrcode = ">=0.0.2"
+path_ignore_pattern = "*"
+python-argtools = "*"
+python-asynctools = ">=0.0.4"
+python-dateutil = "*"
+python-dictattr = ">=0.0.4"
+python-download = ">=0.0.3"
+python-filewrap = ">=0.2.5"
+python-httpfile = ">=0.0.5"
+python-http_request = ">=0.0.6"
+python-iterutils = ">=0.2.4.1"
+python-property = ">=0.0.3"
+python-retrytools = ">=0.0.2"
+python-undefined = "*"
+yarl = "*"
+
+[tool.poetry.scripts]
+python-alist = "alist.__main__:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.packages]]
+include = "alist"
